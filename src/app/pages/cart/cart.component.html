@@ -1,0 +1,26 @@
+<div class="main">
+
+    <div class="products" *ngFor="let p of icecreamSrvc.cart">
+      <h1 id="names"> {{p.name}}</h1>
+      <img [src]="p.img" alt="Photo of Ice Cream">
+      <h3>{{p.sub}} </h3>
+      <p>{{p.price | currency: "VND" }} VND</p>
+      <!-- <p id="solds" *ngIf="p.inStock == 0">Het hang</p> -->
+      <div *ngIf="p.inStock !== 0">
+        <button  (click)="this.icecreamSrvc.add(p)" id="button"> Mua hàng </button>
+      </div>
+      <div *ngIf="p.inStock === 0">
+        <button disabled id="button"> Hết Hàng </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="page" style="margin-top: 40px;text-decoration: none;">
+    <button style="margin-left: 650px; height: 40px; width: 40px;background-color: white; "> 1 </button>
+    <button style="height: 40px; width: 40px;background-color: white; "> 2 </button>
+    <button style=" height: 40px; width: 40px;background-color: white; "> 3 </button>
+    <button style=" height: 40px; width: 40px;background-color: white; "> 4 </button>
+    <button style=" height: 40px; width: 40px;background-color: white; "> .... </button>
+  </div> -->
+

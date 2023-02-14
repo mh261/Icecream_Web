@@ -1,0 +1,16 @@
+<div class="main">
+
+    <div class="products" *ngFor="let p of this.icecreamSrvc.cart">
+        <h1 id="names"> {{p.name}}</h1>
+        <img [src]="p.img" alt="Photo of Ice Cream">
+        <h3>{{p.price | currency: "VND" }} VND</h3>
+        <h3> Số lượng: {{p.quantity}}</h3>
+        <h3>Tổng tiền: {{p.price * p.quantity} </h3>
+    </div>
+    <div *ngIf="this.icecreamSrvc.cart.length != 0 ">
+        <h1>
+            Tổng tiền tất cả sản phẩm: {{this.icecreamSrvc.total}} VND 
+        </h1>
+
+    </div>
+</div>
