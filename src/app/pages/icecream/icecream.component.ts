@@ -6,7 +6,12 @@ import { ServiceService } from 'src/app/service/service.service';
   styleUrls: ['./icecream.component.scss']
 })
 export class IcecreamComponent implements OnInit {
-ngOnInit(): void {
+  constructor(public icecreamSrvc: ServiceService){
+    
+  }
+
+
+  ngOnInit(): void {
   
 }
 }

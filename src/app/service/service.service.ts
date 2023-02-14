@@ -23,36 +23,41 @@ export class ServiceService {
       return;
     }
     else{
-      for(let prdt of this.cart){
-        if(prdt.id == product.id){
-          product.quantity++;
+      for(let i =0; i < this.cart.length; i++){
+        if(this.cart[i].id === product.id){
+          this.cart[i].quantity++;
           product.inStock--;
           console.log(this.cart)
           return
         }
-        else{
-          this.cart.push(product)
-          prdt.quantity++
-          product.inStock--;
-          console.log(this.cart)
-          return;
+      }
+      this.cart.push(product);
+      console.log(this.cart);
+        // else{
+        //   this.cart.push(product)
+        //   prdt.quantity++
+        //   product.inStock--;
+        //   console.log(this.cart)
+        //   return;
         }
       }
-    }
+    
     // product.quantity++;
     // console.log(this.cart);
     // this.subtotal += (product.price*product.quantity)
     // this.total = this.subtotal;
     // console.log("total: " + this.total);
     // // return;
-  }
+  
 
   purchase(){
     let total = 0;
-    for(let prdt of this.cart)
-      total+=((parseInt(prdt.price))*prdt.quantity);
-      alert("total price: " + total);
+    for(let i = 0; i< this.cart.length; i ++){
+            this.subtotal+=((parseInt(this.cart[i].price))*this.cart[i].quantity);
+    }
+    this.total = this.subtotal;
   }
+  
 
 
   product =[
