@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 export class CartComponent implements OnInit{
   constructor(protected router: Router , public icecreamSrvc: ServiceService ) {
     console.log(this.icecreamSrvc.cart);
-    
   }
 
   navigateToBill(){

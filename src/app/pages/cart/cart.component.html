@@ -1,19 +1,17 @@
-<div class="main">
-
-    <div class="products" *ngFor="let p of this.icecreamSrvc.cart">
+  <div class="main">
+    <div class="products" *ngFor="let p of icecreamSrvc.product">
       <h1 id="names"> {{p.name}}</h1>
       <img [src]="p.img" alt="Photo of Ice Cream">
       <h3>{{p.sub}} </h3>
       <p>{{p.price | currency: "VND" }} VND</p>
-      <h3> Số lượng: {{p.quantity}}</h3>
-      <h3>Tổng tiền: {{p.price*p.quantity} </h3>
+      <p id="solds" *ngIf="p.inStock == 0">Hết hàng </p>
+     <div *ngIf="p.inStock !== 0">
+        <button  (click)="this.icecreamSrvc.add(p)" id="button"> Mua hàng </button>
+      </div>
+      <div *ngIf="p.inStock === 0"> 
+       <button disabled id="button"> Hết Hàng </button>
+      </div>
+    </div>
   </div>
-  <div *ngIf="this.icecreamSrvc.cart.length != 0 ">
-      <h1>
-        <button (click)="navigateToBill()"> Xác nhận </button>
-      </h1>
-  </div>
-</div>
 
- 
 

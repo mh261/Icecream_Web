@@ -1,62 +1,67 @@
-<!-- <div>
+<div>
 
   <header class="header">
     <nav class="nav">
       <div class="menu">
-        <i class="fa-light fa-bars"></i> -->
-        <!-- <button class="bar" (click)="showSubInfo()">
-          <span class="material-symbols-outlined">menu</span> -->
-          <!-- <div class="sub_info" *ngIf="this.temp == false"> -->
-            <!-- <button>Khuyến mãi đặc biệt</button>
+        <!-- <i class="fa-light fa-bars"></i> -->
+         <button class="bar" (click)="showSubInfo()">
+          <span  class="material-symbols-outlined">menu</span> 
+         <!-- <div class="sub_info" *ngIf="this.temp == false"> 
+            <button>Khuyến mãi đặc biệt</button>
             <button>Liên hệ</button>
             <button>Hệ thống cửa hàng</button>
             <button>Giới thiệu</button>
-          </div> -->
-           <!-- <div id="sub_info" >
+          </div>  -->
+           <div id="sub_info" >
             <button>Khuyến mãi đặc biệt</button>
-            <button>Liên hệ</button> --> -->
-            <!-- <button>Hệ thống cửa hàng</button>
+            <button>Liên hệ</button>
+             <button>Hệ thống cửa hàng</button>
             <button>Giới thiệu</button>
           </div>
         </button>
 
 
-        <button>Menu</button>
+        <button (click)="navigateToIcecream()"  >Menu</button>
       </div>
       <div class="info">
         <button>Khuyến mãi đặc biệt</button>
         <button>Liên hệ</button>
-        <button>Hệ thống cửa hàng</button> -->
-        <!-- <button>Giới thiệu</button>
+        <button>Hệ thống cửa hàng</button> 
+       <button>Giới thiệu</button>
       </div>
 
       <div class="personal">
         <i></i>
         <button>Sign In</button>
         
-        <button [routerLink]="['/cart']" class="add_cart">
+        <button (click)="navigatetoCart()" class="add_cart">
           <span class="material-symbols-outlined">
           shopping_cart
           </span>
         </button>
       </div>
     </nav>
-  </header> -->
+  </header>
+<body>
+  <div class="background">
 
+  </div>
+</body>
 
-  <!-- <div class="main">
+<!-- 
+   <div class="main">
 
     <div class="products" *ngFor="let p of icecreamSrvc.product">
       <h1 id="names"> {{p.name}}</h1>
       <img [src]="p.img" alt="Photo of Ice Cream">
       <h3>{{p.sub}} </h3>
       <p>{{p.price | currency: "VND" }} VND</p>
-      <p id="solds" *ngIf="p.inStock == 0">Het hang</p> -->
-      <!-- <div *ngIf="p.inStock !== 0">
+      <p id="solds" *ngIf="p.inStock == 0">Hết hàng </p>
+     <div *ngIf="p.inStock !== 0">
         <button  (click)="this.icecreamSrvc.add(p)" id="button"> Mua hàng </button>
       </div>
-      <div *ngIf="p.inStock === 0"> --> -->
-        <!-- <button disabled id="button"> Hết Hàng </button>
+      <div *ngIf="p.inStock === 0"> 
+       <button disabled id="button"> Hết Hàng </button>
       </div>
     </div>
   </div>
@@ -70,17 +75,4 @@
     <button style=" height: 40px; width: 40px;background-color: white; "> .... </button>
   </div>
 
-</div> -->
-
-<div id="container">
-  <div class="content">
-    <a (click)="navigateToHome()"> Trang chủ</a>
-    <a (click)="navigateToIcecream"> Kem </a>
-    <a> Kem </a>
-    <h2 (click)="navigatetoCart()">{{this.icecreamSrvc.cart.length}}</h2>
-  </div>
-  <div *ngFor="let img of this.icecreamSrvc.product[0].img">
-      <img [src]="img" alt="">
-  </div>
-
-</div>
+</div>    -->
