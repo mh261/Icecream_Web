@@ -1,8 +1,6 @@
 
 
-// .example-icon:hover{
-//     background-color: white;
-// }
+
  #title{
     font-size: 25px;
     color: #FF6A6A ;
@@ -11,10 +9,21 @@
 .my_cart
 {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
-    margin-right: 20px;
-    padding: 0 20px ;
+    margin: auto;
 }
 
-
+button {
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.2);
+    cursor: pointer;
+   background-color: wheat;
+}
 

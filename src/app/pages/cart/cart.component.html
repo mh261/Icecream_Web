@@ -17,7 +17,19 @@
       Giỏ hàng của bạn
     </p>
   <div class="my_cart">
-   
+    <div *ngIf="this.icecreamSrvc.cart.length === 0">
+      <p style="font-size: 25px; margin:auto;" >Hiện tại bạn chưa có sản phẩm nào trong giỏ hàng  </p>
+      <button (click)="navigateToIcecream()" style="font-size: 20px;">
+        <i class="fa-solid fa-backward"></i>
+        Nhấn vào đây dể trở về trang đặt hàng. 
+      </button>
+    </div>
+    
+  
+  <div *ngIf="this.icecreamSrvc.cart.length != 0 ">
+      <button (click)="navigateToBill()" style="font-size: 20px; background-color: pink; align-items: center;">
+      xác nhận đơn hàng 
+  </button>
     <div *ngFor="let c of this.icecreamSrvc.cart">
       <h1>{{c.name}}</h1>
       <img [src]="c.img" alt="Photo of Ice Cream">
@@ -25,9 +37,6 @@
       <p>Số lượng mua: {{c.quantity}}</p>
       <p>Thành tiền: {{c.quantity * c.price}}</p>
     </div>
-  </div>
-  <button (click)="navigateToBill()">
-      xác nhận đơn hàng 
-  </button>
+   
 </div>
   
