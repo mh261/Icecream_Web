@@ -1,70 +1,20 @@
 
 
-.example-icon:hover{
-    background-color: white;
+// .example-icon:hover{
+//     background-color: white;
+// }
+ #title{
+    font-size: 25px;
+    color: #FF6A6A ;
+    text-align: center;
 }
-
-.example-icon
+.my_cart
 {
+    display: flex;
     text-align: center;
     margin-right: 20px;
+    padding: 0 20px ;
 }
 
 
-#content{
-    margin-left: 100px;
-     background-color: pink; 
-     border-style: none; 
-     color: black;
-     font-size: 18px;
-}
 
-
-.main #header {
-    background-color: white;
-    margin-left: 10px;
-}
-
-
-.main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-  
-}
-.main #names{
-margin: auto;
-margin-top: 20px;
-}
-
-.main #solds {
-    color: red;
-    font-size: 24px;
-}
-
-.main #button{
-    background-color: white;
-    font-size: medium;
-    height: 40px;
-    width:  100px;
-    border-radius: 5px;
-    
-}
-
-.main #button:hover {
-    cursor: pointer;
-}
-
-#page {
-    margin-left:  400px;
-}
-
-.products:hover{
-    transform: scale(1.05);
-    transition: 0.5s;
-}
-#sub_info{
-    display: none;
-}

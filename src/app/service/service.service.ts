@@ -13,9 +13,8 @@ export class ServiceService {
   total = 0;
   subtotal = 0;
 
-
   add(product: any){
-    if(this.cart.length == 0){
+    if(this.cart.length === 0){
       this.cart.push(product);
       product.quantity++;
       product.inStock--;
@@ -28,7 +27,7 @@ export class ServiceService {
           this.cart[i].quantity++;
           product.inStock--;
           console.log(this.cart)
-          return
+          return;
         }
       }
       this.cart.push(product);
